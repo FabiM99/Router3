@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GitHubUser } from "./GitHubUser";
+import { ShowGitHubUser } from "./ShowGitHubUser";
 
 export function NewGitHubUsers() {
   const [searchInput, setSearchInput] = useState("");
@@ -26,7 +26,7 @@ export function NewGitHubUsers() {
         />
         <button type="submit">Search</button>
       </form>
-      {username && <GitHubUser username={username} />}
+      {username && <ShowGitHubUser username={username} />}
     </div>
   );
 }

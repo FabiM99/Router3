@@ -1,25 +1,20 @@
-
-import { Welcome } from "./welcome";
 import { Clock } from "./clock";
-import { useState } from "react";
-import { GitHubUser } from './GitHubUser'
+import { ShowGitHubUser } from "./ShowGitHubUser";
 import { NewGitHubUsers } from "./NewGitHubUsers";
+import { Route, Routes } from "react-router-dom";
 
 export function App() {
- 
   return (
+    
     <div>
-   
-    
-       
-          <h3>The exercise has be done by Lucy Lainez and Fabian Mardale</h3>
-
-          <Clock />
-     
-      <GitHubUser />
-      <NewGitHubUsers/>
-    
+      <h3>Title</h3>
+      <Clock />
       
+      <NewGitHubUsers />
+      <Routes>
+      <Route path={"users/:username"} element={<ShowGitHubUser/>}/>
+    </Routes>
     </div>
+    
   );
 }
